@@ -7,6 +7,7 @@ import { Toaster } from "react-hot-toast";
 import Countries from "./pages/Countries";
 import Destinations from "./pages/Destinations";
 import DestinationDetail from "./pages/DestinationDetail";
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               />
             </Routes>
           </main>
+          <Footer/>
         </div>
         <Toaster position="top-right" />
       </Router>
