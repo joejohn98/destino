@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { data } from "../data";
-import BackButton from "../components/BackButton";
+import BackButton from "../components/common/BackButton";
 import { MapPin } from "lucide-react";
 
 const Countries: React.FC = () => {

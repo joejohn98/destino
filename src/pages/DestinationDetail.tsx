@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { data } from "../data";
-import BackButton from "../components/BackButton";
+import BackButton from "../components/common/BackButton";
 import { Clock, Ticket, Globe, Star } from "lucide-react";
 import toast from "react-hot-toast";
 

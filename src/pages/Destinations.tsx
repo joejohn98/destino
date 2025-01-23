@@ -1,9 +1,9 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { data } from "../data";
-import BackButton from "../components/BackButton";
+import BackButton from "../components/common/BackButton";
 
-import {  Star } from "lucide-react";
+import { Star } from "lucide-react";
 
 const Destinations: React.FC = () => {
   const { continentId, countryId } = useParams();
@@ -65,15 +65,14 @@ const Destinations: React.FC = () => {
                   {destination.description}
                 </p>
                 <div className="flex items-center space-x-2">
-              <Star className="w-6 h-6 text-yellow-400 fill-yellow-400" />
-              <span className="text-xl font-semibold text-gray-900 dark:text-white">
-                {destination.ratings}
-              </span>
-              <span className="text-gray-600 dark:text-gray-400">
-                ({destination.reviews} reviews)
-              </span>
-            </div>
-                
+                  <Star className="w-6 h-6 text-yellow-400 fill-yellow-400" />
+                  <span className="text-xl font-semibold text-gray-900 dark:text-white">
+                    {destination.ratings}
+                  </span>
+                  <span className="text-gray-600 dark:text-gray-400">
+                    ({destination.reviews} reviews)
+                  </span>
+                </div>
               </div>
             </div>
           ))}
