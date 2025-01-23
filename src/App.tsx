@@ -1,35 +1,52 @@
-import "./App.css";
-import { ThemeProvider } from "./context/ThemeContext";
+import { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Continents from "./pages/Continents";
-import Navbar from "./components/layout/Navbar";
 import { Toaster } from "react-hot-toast";
-import Countries from "./pages/Countries";
-import Destinations from "./pages/Destinations";
-import DestinationDetail from "./pages/DestinationDetail";
+import { ThemeProvider } from "./context/ThemeContext";
+
+import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
+import Homepage from "./pages/Home";
+
+// Lazy load page components for better initial load performance
+const ContinentsPage = lazy(() => import("./pages/Continents"));
+const CountriesPage = lazy(() => import("./pages/Countries"));
+const DestinationsPage = lazy(() => import("./pages/Destinations"));
+const DestinationDetailPage = lazy(() => import("./pages/DestinationDetail"));
+
+// Loading component for suspense fallback
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 dark:border-white"></div>
+  </div>
+);
 
 function App() {
   return (
     <ThemeProvider>
       <Router>
-        <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900">
+        <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-800">
           <Navbar />
           <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Continents />} />
-              <Route path="/continent/:continentId" element={<Countries />} />
-              <Route
-                path="/country/:continentId/:countryId"
-                element={<Destinations />}
-              />
-              <Route
-                path="/destination/:continentId/:countryId/:destinationId"
-                element={<DestinationDetail />}
-              />
-            </Routes>
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<Homepage />} />
+                <Route path="/continents" element={<ContinentsPage />} />
+                <Route
+                  path="/continent/:continentId"
+                  element={<CountriesPage />}
+                />
+                <Route
+                  path="/country/:continentId/:countryId"
+                  element={<DestinationsPage />}
+                />
+                <Route
+                  path="/destination/:continentId/:countryId/:destinationId"
+                  element={<DestinationDetailPage />}
+                />
+              </Routes>
+            </Suspense>
           </main>
-          <Footer/>
+          <Footer />
         </div>
         <Toaster position="top-right" />
       </Router>
