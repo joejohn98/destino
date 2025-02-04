@@ -24,7 +24,7 @@ const DestinationDetail: React.FC = () => {
           </h2>
           <button
             onClick={() => navigate(-1)}
-            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
           >
             Go Back
           </button>
@@ -96,7 +96,7 @@ const DestinationDetail: React.FC = () => {
 
             <button
               onClick={handleWebsiteClick}
-              className="inline-flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
+              className="inline-flex items-center space-x-2 text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300"
             >
               <Globe className="w-5 h-5" />
               <span className="text-lg font-medium">Visit Website</span>

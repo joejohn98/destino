@@ -12,6 +12,7 @@ const ContinentsPage = lazy(() => import("./pages/Continents"));
 const CountriesPage = lazy(() => import("./pages/Countries"));
 const DestinationsPage = lazy(() => import("./pages/Destinations"));
 const DestinationDetailPage = lazy(() => import("./pages/DestinationDetail"));
+const NotFoundPage = lazy(() => import("./pages/NotFound"));
 
 // Loading component for suspense fallback
 const LoadingSpinner = () => (
@@ -43,6 +44,7 @@ function App() {
                   path="/destination/:continentId/:countryId/:destinationId"
                   element={<DestinationDetailPage />}
                 />
+                <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </Suspense>
           </main>

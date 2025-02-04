@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                 >
                   Home
                 </a>
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                 >
                   Destinations
                 </a>
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                 >
                   Contact
                 </a>
@@ -53,25 +53,25 @@ const Footer: React.FC = () => {
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
               >
                 <Facebook className="h-6 w-6" />
               </a>
               <a
                 href="#"
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
               >
                 <Twitter className="h-6 w-6" />
               </a>
               <a
                 href="#"
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
               >
                 <Instagram className="h-6 w-6" />
               </a>
               <a
                 href="#"
-                className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
               >
                 <Youtube className="h-6 w-6" />
               </a>
